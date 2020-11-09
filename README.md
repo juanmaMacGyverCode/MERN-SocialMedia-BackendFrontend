@@ -23,5 +23,6 @@
    - To install jsonwebtoken, run ```yarn add jsonwebtoken```
    - To install express-jwt, run ```yarn add express-jwt```
    - To install lodash, run ```yarn add lodash```
+   - FRONT. To install babel/preset-react ```yarn add --dev @babel/preset-react```
    - To run the application for development, run ```  npm run development  ``` or ``` yarn development ```
 4. Open [localhost:3000](http://localhost:3000/) in the browser
