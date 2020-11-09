@@ -6,7 +6,7 @@
   "author": "Juan Manuel López Durán",
   "license": "MIT",
   "dependencies": {
-    "@hot-loader/react-dom": "16.13.0",
+    "@hot-loader/react-dom": "^17.0.0",
     "body-parser": "^1.19.0",
     "compress": "^0.99.0",
     "compression": "^1.7.4",
@@ -21,18 +21,19 @@
     "mongoose": "^5.10.13",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-hot-loader": "4.12.20"
+    "react-hot-loader": "^4.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.1.0",
+    "file-loader": "^6.2.0",
     "nodemon": "^2.0.6",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-middleware": "3.7.2",
-    "webpack-hot-middleware": "2.25.0",
+    "webpack-dev-middleware": "^4.0.1",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^2.5.2"
   },
   "scripts": {

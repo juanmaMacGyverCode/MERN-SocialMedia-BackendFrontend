@@ -24,5 +24,7 @@
    - To install express-jwt, run ```yarn add express-jwt```
    - To install lodash, run ```yarn add lodash```
    - FRONT. To install babel/preset-react ```yarn add --dev @babel/preset-react```
+   - FRONT. To install webpack-hot-middleware file-loader ```yarn add --dev webpack-dev-middleware webpack-hot-middleware file-loader```
+   - FRONT. To install webpack-hot-loader ``` yarn add react-hot-loader @hot-loader/react-dom```
    - To run the application for development, run ```  npm run development  ``` or ``` yarn development ```
 4. Open [localhost:3000](http://localhost:3000/) in the browser
