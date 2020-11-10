@@ -7,6 +7,8 @@ import helmet from 'helmet';
 import Template from './../template';
 import userRoutes from './routes/user.routes';
 import authRoutes from './routes/auth.routes';
+import devBundle from './devBundle';
+import path from 'path';
 
 /*
 - body-parser: Solicite el middleware de análisis del cuerpo para manejar las complejidades del análisis 
@@ -30,7 +32,13 @@ desde la línea de comando.
 Para instalar el módulo cors, ejecute "yarn add cors" desde la línea de comando.
 */
 
+const CURRENT_WORKING_DIR = process.cwd();
 const app = express();
+/*
+Express añadirá codigo importado del middleware desde el client-side webpack. Iniciará la compilación
+de Webpack y empaquetará el client-side y también habilita el hot reloading.
+*/
+devBundle.compile(app);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,6 +46,18 @@ app.use(cookieParser());
 app.use(compress());
 app.use(helmet());
 app.use(cors());
+
+/*
+Para asegurarnos de que el servidor EXPRESS maneja correctamente las solicitudes de archivos estáticos 
+como archivos CSS, imágenes o el JS del lado del cliente incluido, lo configuraremos para que sirva 
+archivos estáticos desde la carpeta DIST agregando la siguiente configuración en EXPRESS.JS
+
+Con esta configuración, cuando EXPRESS reciba una petición en una ruta con /dist, sabremos ver que el 
+recurso estático pedido en el dist folder antes de devolver el recurso en la response. Ahora podremos 
+cargarlo en dist.
+*/
+app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
+
 app.use('/', userRoutes);
 app.use('/', authRoutes);
 
