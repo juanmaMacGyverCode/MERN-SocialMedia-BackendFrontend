@@ -25,4 +25,4 @@ const App = () => {
 /*
 Marcar el componente como HOT es esencial para mantener el reloading de nuestros componentes REACT durante el desarrollo.
 */
-export default hot(module) (App);
+export default hot(module)(App);

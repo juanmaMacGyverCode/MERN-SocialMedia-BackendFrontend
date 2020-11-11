@@ -27,3 +27,5 @@ const theme = createMuiTheme({
         type: 'light'
     }
 });
+
+export default theme;

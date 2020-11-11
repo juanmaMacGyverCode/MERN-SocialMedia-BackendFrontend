@@ -43,7 +43,7 @@ export default function Home() {
             </Typography>
             <CardMedia className={classes.media} image={logoPrueba} title="Logo de prueba"/>
             <CardContent>
-            <Typography variant="body" component="p">
+            <Typography variant="body2" component="p">
                 Welcome to the MERN Skeleton home page.
             </Typography>
             </CardContent>
